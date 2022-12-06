@@ -1,7 +1,7 @@
 nav {
     margin: 27px auto 0;
     position: relative;
-    width: 400px;
+    width: 500px;
     height: 50px;
     background-color: #34495e;
     border-radius: 8px;
@@ -40,6 +40,10 @@ a:nth-child(4) {
     width: 100px;
 }
 
+a:nth-child(5) {
+    width: 100px;
+}
+
 nav .start-accueil, a:nth-child(1):hover~.animation {
     width: 100px;
     left: 0;
@@ -56,10 +60,16 @@ nav .start-projet, a:nth-child(3):hover~.animation {
     background-color: #96c2e7;
 }
 
-nav .start-contact, a:nth-child(4):hover~.animation {
+nav .start-contact, a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 400px;
+    background-color: #9191ff;
+}
+
+nav .start-veille, a:nth-child(4):hover~.animation {
     width: 100px;
     left: 300px;
-    background-color: #9191ff;
+    background-color: #9a21cb;
 }
 
 h1 {
