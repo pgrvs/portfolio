@@ -239,7 +239,7 @@
     .direction-r .flag:before {
         position: absolute;
         top: -30px;
-        left: 50%;
+        left: 51.5%;
         content: " ";
         display: block;
         width: 12px;
@@ -285,7 +285,9 @@
         position: relative;
         margin: 1em 0 0 0;
         padding: 1em;
-        background: rgb(245, 245, 245);
+        background: #2c3e50;
+        border: white 2px solid;
+        border-radius: 20px;
         -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
         -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
