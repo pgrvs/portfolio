@@ -1,7 +1,7 @@
 TODO :
-    - prensenattion
+    - prensenation
     - description de la formation
     - description les periode de stage
-    - description des progets
+    - description des projets
     - description outils utiliser
     - description comment on a travailler

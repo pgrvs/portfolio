@@ -20,13 +20,24 @@ img {
     max-width: 400px;
 }
 
+.petitEncadrement{
+    max-width: 400px;
+    width: 90%;
+}
+
+.infoProjet{
+    width: 95%;
+}
+
+.infoProjet h3{
+    text-align: center;
+}
+
 .encadrerBlanc{
     padding: 10px;
     background: #2c3e50;
     border: white 2px solid;
     border-radius: 20px;
-    max-width: 450px;
-    width: 93%;
 }
 .encadrerBlanc p{
     color: white;
@@ -34,6 +45,26 @@ img {
 
 .encadrerBlanc h3{
     color: white;
+}
+
+.encadrerBlanc h5{
+    color: white;
+}
+
+.titreProjet {
+    font-family: Georgia,serif;
+    font-size: 40px;
+    color: white;
+}
+
+#videoStage{
+    border-radius: 20px;
+}
+
+#logoGitHub{
+    cursor: pointer;
+    color: white;
+    font-size: 3rem;
 }
 
 @media screen and (max-width: 500px) {
