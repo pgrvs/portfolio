@@ -36,8 +36,8 @@ img {
 .encadrerBlanc{
     padding: 10px;
     background: #2c3e50;
-    border: white 2px solid;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px #18222c;
 }
 .encadrerBlanc p{
     color: white;
