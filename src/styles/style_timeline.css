@@ -1,3 +1,33 @@
+.encadrementFormation{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 1000px;
+}
+
+@media screen and (max-width: 1200px){
+    .encadrementFormation{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        .encadrementSombre{
+            margin: 20px 10px;
+        }
+    }
+
+    .grandEncadrement{
+        max-width: 422px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .encadrementFormation{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .timeline {
     color: rgb(50, 50, 50);
     font-size: 112.5%;
@@ -68,6 +98,10 @@
 
 .timeline li {
     padding: 1em 0;
+}
+
+.listeFormationCompetences li{
+    padding: 0;
 }
 
 .timeline li:after {
@@ -200,7 +234,20 @@
     box-shadow: 3px 3px 20px #18222c;
     text-align: start;
     padding: 20px;
+    position: relative;
+    transition: 200ms;
+}
 
+.buttonPlus{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    transition: 200ms;
+}
+
+.buttonPlus:hover{
+    transform: scale(1.2);
 }
 
 .direction-r .desc {
@@ -209,7 +256,7 @@
 
 /* ================ Timeline Media Queries ================ */
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 996px) {
     .timeline {
         width: 100%;
         padding: 4em 0 1em 0;
@@ -217,6 +264,10 @@
 
     .timeline li {
         padding: 2em 0;
+    }
+
+    .listeFormationCompetences li{
+        padding: 0;
     }
 
     .direction-l,
@@ -284,12 +335,9 @@
         position: relative;
         margin: 1em 0 0 0;
         padding: 1em;
-        background: #2c3e50;
-        border: white 2px solid;
+        background: #3a4f64;
         border-radius: 20px;
-        -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 3px 3px 20px #18222c;
         z-index: 15;
         text-align: start;
     }

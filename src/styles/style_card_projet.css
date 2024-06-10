@@ -34,10 +34,6 @@
     bottom: 0;
     left: 0;
     background: inherit;
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 .card.card-has-bg:hover {
@@ -58,9 +54,7 @@
 .card .card-footer .media img {
     border: solid 3px rgba(255, 255, 255, 0.3);
 }
-.card .card-meta {
-    color: #1e2c54;
-}
+
 .card .card-body {
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
