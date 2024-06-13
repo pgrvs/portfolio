@@ -1,0 +1,50 @@
+.sous-titre{
+    margin-bottom: 70px;
+}
+.encadrementInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.encadrement-projet{
+    width: 45%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1200px){
+    .encadrement-projet{
+        width: 90%;
+    }
+}
+
+.lien-exemple{
+    text-decoration: none;
+    padding: 0
+}
+
+.lien-exemple span{
+    margin: 5px 0;
+}
+
+.lien-exemple:hover{
+    text-decoration: none;
+}
+
+.ulCompétence li {
+    margin: 5px 0;
+    text-align: justify;
+}
+
+.buttonShow{
+    color: white;
+    padding: 2px 5px 0 5px;
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+.buttonShow:hover{
+    color: white;
+    transform: scale(1.2);
+    transition: 200ms;
+}

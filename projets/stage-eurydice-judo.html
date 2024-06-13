@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/styles/style_projet_satge_eurydice_judo.css"/>
+    <link rel="stylesheet" href="../src/styles/style_global.css"/>
+    <link rel="icon" href="../favicon.ico" />
+    <title>PortFolio P.G.</title>
+</head>
+<body>
+    <main class="container mt-5">
+        <a href="../projets.html#Inscription-Judo"><i class="buttonRetour bi bi-arrow-left-circle"></i></a>
+        <h2 class="text-center text-white titreProjet">Inscription au Judo</h2>
+        <h3 class="sous-titre text-center">Stage de 2e année de BUT </h3>
+
+            <div class="row encadrementInfo">
+                <div class="col-12 col-md-6 encadrementSombre encadrement-projet mb-4">
+                    <h3>Sujet du satge</h3>
+                    <div class="mb-2">
+                        <p>
+                            Aider les encadrants du Judo de Vesoul à inscrire les adhérents, renouveler leur adhésion,
+                            ainsi qu'à enregistrer toutes ces informations sur Dolibarr* pour pouvoir gérer la facturation de l'adhésion.
+                            Cela simplifie le processus administratif en centralisant toutes les données des adhérents en un seul endroit,
+                            facilitant ainsi la gestion des informations personnelles, des documents requis et des paiements.
+                        </p>
+                        <p>
+                            *Dolibarr est un logiciel open source de gestion d'entreprise intégrant des fonctionnalités de CRM,
+                            ERP et de facturation. Il permet de gérer les aspects financiers au sein d'une interface.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 encadrementSombre encadrement-projet mb-4">
+                    <h3>Déroulement du stage</h3>
+                    <div class="d-flex justify-content-between flex-column">
+                        <ul>
+                            <li>Réunion avec le Directeur général d’Eurydice Informatique, qui est aussi le président du judo, mon tuteur de stage et un professeur de judo</li>
+                            <li>Création d’un diagramme résumant le futur processus d’inscription</li>
+                            <li>Création des écrans de l’application web avec Adobe Illustrator</li>
+                            <li>Développement du site avec React.js et liaison avec l'API de Dolibarr</li>
+                            <li>Mise en forme du site avec du CSS</li>
+                            <li>Migration du projet vers Next.js pour fusionner la partie front-end et la partie back-end, permettant l’envoi des emails grâce à Nodemailer</li>
+                            <li>Intégration sur le vrai Dolibarr du Judo et tests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        <div>
+            <h2 class="" id="Inscription-Judo-diagramme">Diagramme</h2>
+            <div class="row mb-3">
+                <div id="carousel-inscription-Judo-diagramme" class="col-12 col-md-7 carousel carousel-dark slide mb-2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/diagramme/diagramme-partie-1.png" class="d-block w-100" alt="Diagramme">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/diagramme/diagramme-partie-2.png" class="d-block w-100" alt="Diagramme">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/diagramme/diagramme-partie-3.png" class="d-block w-100" alt="Diagramme">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInscription-Judo-diagramme" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-inscription-Judo-diagramme" data-bs-slide="next">
+                        <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-0">
+                                Ce diagramme représente le chemin que le site va suivre en fonction des interactions utilisateur.
+                                Il commence par la recherche d'un adhérent existant, puis en fonction des résultats,
+                                il procède à la récupération des informations de l'adhérent.
+                                <br>
+                                <br>
+                                Si l'adhérent est majeur, les informations supplémentaires concernant les responsables légaux sont omises.
+                                Ensuite, l'état de santé de l'adhérent est évalué à travers un questionnaire donné en main propre et,
+                                si nécessaire, une demande de certificat médical est envoyée.
+                                <br>
+                                <br>
+                                La dernière étape consiste à choisir le nombre de règlements et à générer une facture,
+                                suivie de l'envoi par email des documents nécessaires à l'adhérent.
+                                Ce processus permet de centraliser les informations et d'assurer une gestion efficace des adhésions et des facturations via Dolibarr.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="" id="Judo-Connexion">Connexion</h2>
+            <div class="row mb-3">
+                <div id="carousel-Judo-Connexion" class="col-12 col-md-7 carousel carousel-dark slide mb-2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-connexion.png" class="d-block w-100" alt="Page de connexion du site">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-accueil.png" class="d-block w-100" alt="Page d'accueil du site">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Judo-Connexion" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-Judo-Connexion" data-bs-slide="next">
+                        <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-0">
+                                Pour se connecter au site d'inscription, nous utilisons NextAuth, une solution d'authentification pour les applications Next.js,
+                                combinée avec des JSON Web Tokens (JWT) pour gérer les sessions utilisateur.
+                                <br><br>
+                                Dans notre implémentation, NextAuth utilise des JWT pour créer des sessions utilisateur sécurisées.
+                                Un JWT, signé par le serveur, contient les informations d'authentification et est stocké sur le client,
+                                étant envoyé avec chaque requête pour vérifier la session.
+                                Nous avons configuré ces tokens pour expirer après une journée,
+                                assurant que les utilisateurs se reconnectent périodiquement pour renforcer la sécurité.
+                                De plus, l'utilisateur peut se déconnecter via un bouton sur la page d'accueil.
+                                <br><br>
+                                Pour le moment, un seul utilisateur est défini dans les variables d'environnement,
+                                car le projet est encore en cours de développement et cette configuration n'est pas définitive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="" id="Judo-Recherche-Adherent">Recherche Adhérent</h2>
+            <div class="row mb-3">
+                <div id="carousel-Judo-Recherche-Adherent" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-recherche.png" class="d-block w-100" alt="Page de recherche adhérent">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-nom.png" class="d-block w-100" alt="Page de formulaire adhérent">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-adresse.png" class="d-block w-100" alt="Page de formulaire adhérent">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-coordonnees.png" class="d-block w-100" alt="Page de formulaire adhérent">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-indo-sup.png" class="d-block w-100" alt="Page de formulaire adhérent">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Judo-Recherche-Adherent" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-Judo-Recherche-Adherent" data-bs-slide="next">
+                        <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-0">
+                                Lors de la procédure d'inscription,
+                                le site permet aux encadrants du Judo de Vesoul de rechercher un adhérent existant.
+                                Cette recherche peut être effectuée en utilisant divers critères tels que le numéro de licence,
+                                le nom ou le prénom de l'adhérent.
+                                <br><br>
+                                Si l'adhérent est trouvé,
+                                ses informations existantes sont récupérées et affichées, facilitant ainsi la mise à jour des données
+                                ou le renouvellement de l'adhésion.
+                                <br><br>
+                                Dans le cas où la recherche ne retourne aucun résultat,
+                                le site offre la possibilité de créer un nouveau profil d'adhérent.
+                                <br><br>
+                                Cette fonctionnalité permet aux encadrants de saisir toutes les informations nécessaires concernant le nouvel adhérent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="" id="Judo-Gestion-Responsables">Gestion des responsables</h2>
+            <div class="row mb-3">
+                <div id="carousel-Judo-Gestion-Responsables" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-gestion-responsable-vide.png" class="d-block w-100" alt="Page de recherche adhérent">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-nom.png" class="d-block w-100" alt="Page de gestion des responsables">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-adresse.png" class="d-block w-100" alt="Page de formulaire des responsables">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-coordonnees-vide.png" class="d-block w-100" alt="Page de formulaire des responsables">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-coordonnees.png" class="d-block w-100" alt="Page de formulaire des responsables">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-recevoir.png" class="d-block w-100" alt="Page de formulaire des responsables">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-gestion-responsable.png" class="d-block w-100" alt="Page de recherche adhérent">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Judo-Gestion-Responsables" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-Judo-Gestion-Responsables" data-bs-slide="next">
+                        <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-0">
+                                Si l'adhérent est mineur,
+                                le site inclut également un formulaire pour renseigner les informations des responsables légaux.
+                                Ce formulaire permet de collecter des détails importants tels que les noms, prénoms, adresses,
+                                numéros de téléphone et adresses email des responsables.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="" id="Judo-Etat-Sante">L'état de santé de l'adhérent</h2>
+            <div class="row mb-3">
+                <div id="carousel-Judo-Etat-Sante" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-message-questionnaire.png" class="d-block w-100" alt="Page de information pour l'encadrant">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-reponce-questionnaire.png" class="d-block w-100" alt="Page de formulaire de santé">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-message-oui-questionnaire.png" class="d-block w-100" alt="Page de information pour l'encadrant">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-message-non-questionnaire.png" class="d-block w-100" alt="Page de information pour l'encadrant">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Judo-Etat-Sante" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-Judo-Etat-Sante" data-bs-slide="next">
+                        <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-0">
+                                La section du site dédiée à l'état de santé donne à l'encadrant,
+                                l'instruction de remettre un questionnaire de santé à l'adhérent ou à son responsable.
+                                <br><br>
+                                Une fois lu l'encadrant va juste demandé si l'adhérent a répondu oui à une au plusieurs questions
+                                et dans ce cas précis, il va demander à l'adhérent de fournir un certificat médical.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="" id="Judo-Cotisation">Cotisation de licence</h2>
+            <div class="row mb-3">
+                <div id="carousel-Judo-Cotisation" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-form-cotisation.png" class="d-block w-100" alt="Page de cotisation">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-0">
+                                La section sur la cotisation du site calcule automatiquement
+                                le montant de la licence en fonction de la catégorie de l'adhérent,
+                                déterminée par son âge.
+                                Le montant correspondant de la licence est affiché.
+                                Les encadrants peuvent ensuite proposer différentes options de paiement,
+                                permettant à l'adhérent de régler la cotisation en plusieurs fois si nécessaire.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="" id="Judo-Fin">Fin de l'inscription</h2>
+            <div class="row mb-3">
+                <div id="carousel-Judo-Fin" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../src/assets/satge2-eurydice-judo/ecran-inscription-judo/judo-fin.png" class="d-block w-100" alt="Page de fin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="row justify-content-center">
+                        <div class="encadrementSombre infoProjet mb-2">
+                            <h3>Description</h3>
+                            <p class="mb-4">
+                                La dernière page du site marque la fin du processus d'inscription et récapitule les documents
+                                que l'adhérent recevra par e-mail. En cliquant sur le bouton de finalisation,
+                                toutes les informations sont envoyées à Dolibarr grâce à son API,
+                                et des e-mails sont automatiquement envoyés.
+                                <br><br>
+                                Un e-mail est envoyé à l'adhérent,
+                                et un autre est envoyé aux responsables légaux, le cas échéant.
+                            </p>
+                            <h4>Exemple des pièces jointe au email </h4>
+                            <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/piece-jointe/Horaires.pdf">
+                                <span class="badge rounded-pill text-bg-primary fs-6">Horaires</span>
+                            </a>
+                            <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/piece-jointe/Regles-autours-du-certificat-medical-et-des-attestations-sur-honneur.pdf">
+                                <span class="badge rounded-pill text-bg-primary fs-6">Regles sur certificat medical et attestations</span>
+                            </a>
+                            <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/piece-jointe/Attestation-QS-sport.pdf">
+                                <span class="badge rounded-pill text-bg-primary fs-6">Attestation majeur</span>
+                            </a>
+                            <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/piece-jointe/Attestation-relative-etat-de-sante-du-sportif-mineur.pdf">
+                                <span class="badge rounded-pill text-bg-primary fs-6">Attestation mineur</span>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row encadrementInfo">
+            <div class="col-12 col-md-6 encadrementSombre encadrement-projet mb-4">
+                <h3>Compétence 1</h3>
+                <h5>Réaliser un développement d’application</h5>
+                <div class="mb-2">
+                    <ul class="ulCompétence">
+                        <li><strong>Élaborer des conceptions simples :</strong>
+                            <ul>
+                                <li class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        <strong>Diagramme de processus :</strong>
+                                        Un diagramme détaillé a été créé pour représenter le flux d'inscription des adhérents,
+                                        depuis la recherche jusqu'à la génération des factures. Cet outil facilite la compréhension
+                                        et la simplification du processus pour les encadrants.
+                                    </div>
+                                    <a class="m-3 buttonShow bg-primary" href="#Inscription-Judo-diagramme"><i class=" bi bi-arrow-up-circle"></i></a>
+                                </li>
+                                <li>
+                                    <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/Judo-Inscription-Maquette.pdf">
+                                        <span class="badge rounded-pill text-bg-primary fs-6">Maquette</span>
+                                    </a> :
+                                    Des maquettes des différentes pages de l'application ont été réalisées avec
+                                    Adobe Illustrator pour garantir une interface claire et intuitive.
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li><strong>Effectuer des essais et évaluer les résultats par rapport aux spécifications :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Tests d'intégration :</strong>
+                                    Les fonctionnalités de l'application, comme l'intégration avec l'API de Dolibarr
+                                    et l'envoi d'e-mails, ont été développées et testées.
+                                    Chaque fonctionnalité a été vérifiée pour assurer sa conformité aux exigences définies.
+                                    Création d'un
+                                    <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/Jeu-de-tests.png">
+                                        <span class="badge rounded-pill text-bg-primary fs-6">Jeu de tests</span>
+                                    </a>
+                                    avec divers adhérent.
+
+                                </li>
+                                <li><strong>Améliorations continues :</strong> Suite aux résultats des tests, des itérations ont été effectuées sur le design et le code afin de corriger les erreurs et d'améliorer l'ergonomie.</li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li><strong>Développer des interfaces utilisateur :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Utilisation de React.js et Next.js :</strong>
+                                    React.js a été utilisé pour développer des interfaces utilisateur dynamiques,
+                                    tandis que Next.js a permis d'intégrer efficacement les parties front-end
+                                    et back-end, assurant ainsi une performance optimale et une facilité de maintenance.
+                                    <a class="lien-exemple" href="https://github.com/pgrvs/inscription-judo.git">
+                                        <span class="badge rounded-pill text-bg-primary fs-6">Partie React</span>
+                                    </a>
+                                    <a class="lien-exemple" href="https://github.com/pgrvs/inscription-judo-nextjs.git">
+                                        <span class="badge rounded-pill text-bg-primary fs-6">Partie Next.js</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <strong>Accessibilité et convivialité :</strong>
+                                    Les principes d'accessibilité ont été appliqués pour rendre l'applicatio
+                                    utilisable par tous les encadrants, indépendamment de leur niveau de compétence technique.
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li><strong>Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Spécifications fonctionnelles :</strong>
+                                    Les exigences fonctionnelles telles que l'inscription,
+                                    la mise à jour des informations des adhérents et la facturation
+                                    ont été définies et implémentées dans l'application.
+                                </li>
+                                <li>
+                                    <strong>Spécifications non fonctionnelles :</strong>
+                                    Des aspects comme la sécurité (utilisation de sessions JWT pour l'authentification)
+                                    et la performance (optimisation du rendu des pages avec Next.js) ont été pris en compte.
+                                    <a class="lien-exemple" href="https://github.com/pgrvs/inscription-judo-nextjs/blob/main/src/app/api/auth/%5B...nextauth%5D/route.js">
+                                        <span class="badge rounded-pill text-bg-primary fs-6">Code Next.js</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li><strong>Adopter de bonnes pratiques de conception et de programmation :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Modularité et réutilisabilité :</strong>
+                                    L'utilisation de composants React a facilité la réutilisation des éléments d'interface
+                                    dans différentes parties de l'application, ce qui simplifie la maintenance et l'évolution du projet.
+                                    Exemple : un composent buttonSuvant a été mis en place et des classes css réutilisablent ont été mise en place.
+                                </li>
+                                <li>
+                                    <strong>Documentation :</strong>
+                                    Un document pdf a été créé pour faciliter la mise en place de ce projet avec un logiciel Dolibarr.
+                                    <a class="lien-exemple" href="../src/assets/satge2-eurydice-judo/Documentation-installation-Judo-inscription.pdf">
+                                        <span class="badge rounded-pill text-bg-primary fs-6">Documentation d'installation</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 encadrementSombre encadrement-projet mb-4">
+                <h3>Compétence 5 </h3>
+                <h5>Conduire un projet</h5>
+                <div class="mb-2">
+                    <p>
+                        <strong>Appréhender les besoins du client et de l’utilisateur :</strong>
+                        Rencontre avec le Directeur général d’Eurydice Informatique,
+                        qui est aussi le président du judo,
+                        ainsi qu'avec d'autres encadrants pour comprendre leurs besoins spécifiques
+                        en matière de gestion des adhésions et de facturation.
+                    </p>
+
+                    <p><strong>Mettre en place les outils de gestion de projet :</strong>
+                        Utilisation d'Adobe Illustrator pour créer des diagrammes du processus d'inscription,
+                        et migration du projet vers Next.js pour optimiser le front-end et le back-end.
+                    </p>
+
+                    <p><strong>Identifier les acteurs et les phases d’un cycle de développement :</strong>
+                        Collaboration avec le Directeur général d’Eurydice Informatique, votre tuteur de
+                        stage et un professeur de judo pour identifier les différents acteurs impliqués dans
+                        le processus d'inscription et de gestion des adhésions.
+                    </p>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="m-3 buttonShow bg-primary" href="#Inscription-Judo-diagramme"><i class=" bi bi-arrow-up-circle"></i></a>
+                        <p><strong>Identifier les processus et formaliser les besoins du client :</strong>
+                            Formalisation du processus d'inscription en créant des diagrammes
+                            et en détaillant les étapes nécessaires pour inscrire un adhérent,
+                            renouveler son adhésion et gérer la facturation, en tenant compte des exigences de Dolibarr.
+                        </p>
+                    </div>
+
+                    <p><strong>Identifier les critères de faisabilité d’un projet informatique :</strong>
+                        Prise en compte des exigences techniques et fonctionnelles pour intégrer le site
+                        d'inscription avec l'API de Dolibarr, en assurant la gestion sécurisée des sessions utilisateur avec NextAuth et JWT.
+                    </p>
+
+                    <p><strong>Définir et mettre en œuvre une démarche de suivi de projet :</strong>
+                        Suivi d'un processus méthodique depuis la création des wireframes jusqu'au déploiement
+                        et aux tests finaux sur Dolibarr, en assurant que chaque étape était soigneusement documentée et suivie.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
