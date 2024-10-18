@@ -38,7 +38,8 @@
 
 .buttonShow{
     color: white;
-    padding: 2px 5px 0 5px;
+    padding: 2px 5px 0 5.5px;
+    margin: 0 5px 0 20px;
     border-radius: 50%;
     transition: 200ms;
 }
