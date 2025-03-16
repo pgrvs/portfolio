@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Judo de Vesoul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style_global.css"/>
+    <link rel="stylesheet" href="../styles/style_projet.css"/>
+    <link rel="stylesheet" href="../styles/style_detail_projet.css"/>
+    <link rel="stylesheet" href="../styles/variables.css"/>
+    <link rel="icon" href="../../favicon.ico" />
+</head>
+<body>
+<div class="container">
+    <header class="header-detail">
+        <div class="div-retour-header">
+            <a id="dynamic-back-link" data-section-id="projet-inscription-judo">
+                <i class="bi bi-arrow-left-square"></i>
+            </a>
+        </div>
+        <div>
+            <h1 class="fw-bold">Inscription - Judo de Vesoul</h1>
+            <p>Stage de 2<sup>e</sup> année de BUT Informatique</p>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="div-titre-&-github-link">
+            <h3>Sujet du projet</h3>
+            <a href="https://github.com/pgrvs/inscription-judo.git"><i class="bi bi-github"></i></a>
+        </div>
+        <p>
+            L’objectif de ce projet était de faciliter le travail des encadrants du Judo de Vesoul en leur permettant d’inscrire
+            les adhérents, de renouveler leur adhésion et d’enregistrer ces informations directement dans <strong>Dolibarr</strong>. Cette solution
+            vise à centraliser l’ensemble des données des adhérents en un seul endroit, simplifiant ainsi la gestion administrative.
+            Elle permet notamment de gérer efficacement les informations personnelles, les documents requis et les paiements liés
+            aux adhésions.
+        </p>
+        <p class="text-secondary">
+            Dolibarr est un logiciel open source de gestion d’entreprise intégrant des fonctionnalités de CRM, ERP et de facturation.
+            Il offre une interface pour gérer les aspects financiers et administratifs.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Déroulement du stage</h3>
+        <ul>
+            <li>Rencontre avec le Directeur général d’Eurydice Informatique (également président du club de Judo), mon tuteur de stage et un professeur de judo pour définir les besoins du projet.</li>
+            <li>Élaboration d’un diagramme détaillant le futur processus d’inscription des adhérents.</li>
+            <li>Conception des interfaces de l’application web à l’aide d’<strong>Adobe Illustrator</strong>.</li>
+            <li>Développement du site en utilisant <strong>React.js</strong>, avec intégration de l'API de <strong>Dolibarr</strong> pour la gestion des données.</li>
+            <li>Mise en forme du site avec du <strong>CSS</strong> pour assurer une interface claire et ergonomique.</li>
+            <li>Migration du projet vers <strong>Next.js</strong> afin de fusionner les parties front-end et back-end, permettant notamment l’envoi d’e-mails via <strong>Nodemailer</strong>.</li>
+            <li>Intégration de l’application sur l’environnement réel de <strong>Dolibarr</strong> du Judo de Vesoul, suivie d’une phase de tests pour valider le bon fonctionnement du système.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Diagramme</h3>
+        <p>
+            Ce diagramme illustre le parcours suivi par l'application en fonction des interactions utilisateur. Le processus débute par la recherche d'un adhérent existant, avec récupération de ses informations en cas de succès.
+            <br><br>
+            Si l'adhérent est majeur, les informations concernant les responsables légaux sont ignorées. L'état de santé est ensuite évalué via un questionnaire transmis en main propre et, si nécessaire, une demande de certificat médical est envoyée.
+            <br><br>
+            Enfin, l'encadrant choisit le nombre de règlements et génère la facture, avant que les documents requis ne soient envoyés par e-mail à l'adhérent. Ce processus permet de centraliser les informations et d'optimiser la gestion des adhésions et des facturations via Dolibarr.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/diagramme/diagramme-partie-1.png" alt="Diagramme - Partie 1">
+                <img src="../assets/stage2-eurydice-judo/diagramme/diagramme-partie-2.png" alt="Diagramme - Partie 2">
+                <img src="../assets/stage2-eurydice-judo/diagramme/diagramme-partie-3.png" alt="Diagramme - Partie 3">
+            </div>
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Connexion</h3>
+        <p>
+            Pour accéder au site d'inscription, nous utilisons <em>NextAuth</em>, une solution d'authentification conçue pour les applications Next.js, combinée avec des JSON Web Tokens (<em>JWT</em>) pour la gestion des sessions utilisateur.
+        </p>
+        <p>
+            Dans cette implémentation, <em>NextAuth</em> génère un JWT signé par le serveur contenant les informations d'authentification. Ce token est stocké sur le client et envoyé avec chaque requête pour vérifier la session active. Les tokens sont configurés pour expirer après 24 heures, incitant les utilisateurs à se reconnecter régulièrement afin de renforcer la sécurité.
+        </p>
+        <p>
+            Une option de déconnexion est également disponible via un bouton sur la page d'accueil.
+            Pour l'instant, un seul utilisateur est défini dans les variables d'environnement, car le projet est toujours en cours de développement et cette configuration est amenée à évoluer.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-connexion.png" alt="Page de connexion">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-accueil.png" alt="Page d'accueil">
+            </div>
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Recherche Adhérent</h3>
+        <p>
+            Lors de la procédure d'inscription, le site permet aux encadrants du Judo de Vesoul de rechercher un adhérent existant.
+            Cette recherche peut être effectuée à l'aide de plusieurs critères tels que le numéro de licence, le nom ou le prénom de l'adhérent.
+        </p>
+        <p>
+            Si l'adhérent est trouvé, ses informations sont récupérées et affichées, facilitant ainsi la mise à jour des données ou le renouvellement de l'adhésion.
+        </p>
+        <p>
+            Si aucun résultat n'est trouvé, le site propose la création d'un nouveau profil d'adhérent. Cette fonctionnalité permet alors de saisir
+            l'ensemble des informations nécessaires à son inscription.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-recherche.png" alt="Recherche d'adhérent">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-nom.png" alt="Formulaire - Nom de l'adhérent">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-adresse.png" alt="Formulaire - Adresse de l'adhérent">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-coordonnees.png" alt="Formulaire - Coordonnées de l'adhérent">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-indo-sup.png" alt="Formulaire - Informations supplémentaires">
+            </div>
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Gestion des responsables</h3>
+        <p>
+            Si l'adhérent est mineur, le site propose un formulaire dédié permettant de renseigner les informations des responsables légaux.
+            Ce formulaire permet de collecter des informations clés telles que les noms, prénoms, adresses, numéros de téléphone et adresses email des responsables.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-gestion-responsable-vide.png" alt="Gestion des responsables - Aucun responsable ajouté">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-nom.png" alt="Formulaire - Nom du responsable">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-adresse.png" alt="Formulaire - Adresse du responsable">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-coordonnees-vide.png" alt="Formulaire - Coordonnées vides">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-coordonnees.png" alt="Formulaire - Coordonnées du responsable">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-recevoir.png" alt="Formulaire - Responsable recevant les informations">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-gestion-responsable.png" alt="Gestion des responsables - Liste complète">
+            </div>
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>L'état de santé de l'adhérent</h3>
+        <p>
+            La section dédiée à l'état de santé guide l'encadrant dans la remise d'un questionnaire de santé à l'adhérent ou à son responsable.
+            Après la lecture du questionnaire, l'encadrant demande simplement si l'adhérent a répondu "oui" à une ou plusieurs questions.
+            Dans ce cas précis, il est demandé à l'adhérent de fournir un certificat médical pour compléter son inscription.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-message-questionnaire.png" alt="Instruction : Remise du questionnaire">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-reponce-questionnaire.png" alt="Réponse au questionnaire">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-message-oui-questionnaire.png" alt="Message : Nécessité de fournir un certificat médical">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-message-non-questionnaire.png" alt="Message : Pas besoin de certificat médical">
+            </div>
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Cotisation de licence</h3>
+        <p>
+            La section dédiée à la cotisation calcule automatiquement le montant de la licence en fonction de la catégorie de l'adhérent, déterminée par son âge.
+            Le montant correspondant est alors affiché de manière claire pour l'encadrant.
+        </p>
+        <p>
+            Les encadrants ont ensuite la possibilité de proposer différentes options de paiement, permettant à l'adhérent de régler sa cotisation en plusieurs fois si nécessaire.
+            Cette flexibilité facilite la gestion des paiements et répond aux besoins spécifiques des adhérents.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-cotisation.png"
+                     alt="Formulaire de cotisation">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Fin de l'inscription</h3>
+        <p>
+            La dernière page du site marque la fin du processus d'inscription et récapitule les documents que l'adhérent recevra par e-mail.
+            En cliquant sur le bouton de finalisation, toutes les informations sont transmises à <em>Dolibarr</em> via son API, et des e-mails sont automatiquement envoyés.
+        </p>
+        <p>
+            Un e-mail est envoyé à l'adhérent pour confirmer son inscription, et un autre est transmis aux responsables légaux, si nécessaire.
+            Cette automatisation permet de sécuriser et de simplifier l'envoi des documents administratifs.
+        </p>
+        <h4>Exemple des pièces jointes au mail</h4>
+        <div class="attachments">
+            <a href="../assets/stage2-eurydice-judo/piece-jointe/Horaires.pdf" class="attachment-link">
+                Horaires
+            </a>
+
+            <a href="../assets/stage2-eurydice-judo/piece-jointe/Regles-autours-du-certificat-medical-et-des-attestations-sur-honneur.pdf"
+               class="attachment-link">
+                Règles sur certificat médical et attestations
+            </a>
+
+            <a href="../assets/stage2-eurydice-judo/piece-jointe/Attestation-QS-sport.pdf" class="attachment-link">
+                Attestation majeur
+            </a>
+
+            <a href="../assets/stage2-eurydice-judo/piece-jointe/Attestation-relative-etat-de-sante-du-sportif-mineur.pdf"
+               class="attachment-link">
+                Attestation mineur
+            </a>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage2-eurydice-judo/ecran-inscription-judo/judo-fin.png"
+                     alt="Page de finalisation de l'inscription">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Outils utilisés</h3>
+        <ul class="technologies-list">
+            <li><strong>Frameworks :</strong> React.js, Next.js</li>
+            <li><strong>Outils :</strong> Nodemailer</li>
+            <li><strong>Langages :</strong>HTML, CSS, JavaScript</li>
+            <li><strong>API :</strong> Dolibarr</li>
+        </ul>
+    </div>
+
+    <div id="footer-container"></div>
+
+</div>
+
+<script src="../scripts/footer.js"></script>
+<script src="../scripts/carousel.js"></script>
+<script src="../scripts/retour.js"></script>
+
+</body>
+</html>

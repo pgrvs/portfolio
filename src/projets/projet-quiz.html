@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Quiz et Jeu Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style_global.css"/>
+    <link rel="stylesheet" href="../styles/style_projets.css"/>
+    <link rel="stylesheet" href="../styles/style_detail_projet.css"/>
+    <link rel="stylesheet" href="../styles/variables.css"/>
+    <link rel="icon" href="../../favicon.ico" />
+</head>
+<body>
+<div class="container">
+    <header class="header-detail">
+        <div class="div-retour-header">
+            <a href="../../projets.html#projet-quiz"><i class="bi bi-arrow-left-square"></i></a>
+        </div>
+        <div><h1 class="fw-bold">API Quiz et Jeu Quiz</h1>
+            <p>2<sup>e</sup> année de BTS Informatique</p>
+        </div>
+    </header>
+
+    <div class="section">
+        <h3>Sujet du projet</h3>
+        <p>
+            Ce site offre aux utilisateurs la possibilité de participer à un quiz personnalisé.
+            Ils peuvent sélectionner la catégorie de leur choix ainsi que le nombre de questions souhaité.
+        </p>
+        <p>
+            L’application est développée en JavaScript et s’appuie sur une API REST réalisée avec Symfony.
+            Cette API propose deux endpoints principaux : l’un permettant de récupérer les catégories disponibles,
+            et l’autre fournissant les questions et réponses en fonction du nombre de questions spécifié.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/quiz/accueil.png"
+                     alt="Page d'accueil du site avec la sélection de la catégorie et du nombre de questions">
+                <img src="../assets/quiz/affichage-questions.png"
+                     alt="Affichage du quiz">
+                <img src="../assets/quiz/correction-score.png"
+                     alt="Page affichant la correction et le score">
+            </div>
+
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Outils utilisés</h3>
+        <ul>
+            <li><strong>Frameworks :</strong> Symfony, Bootstrap</li>
+            <li><strong>Langages :</strong> Javascript, HTML, CSS</li>
+        </ul>
+    </div>
+
+    <div id="footer-container"></div>
+
+</div>
+
+<script src="../scripts/footer.js"></script>
+<script src="../scripts/carousel.js"></script>
+
+</body>
+</html>

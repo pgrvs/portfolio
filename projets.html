@@ -1,440 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="src/styles/style_nav_bar.css"/>
-  <link rel="stylesheet" href="src/styles/style_card_projet.css"/>
-  <link rel="stylesheet" href="src/styles/style_global.css"/>
-  <link rel="icon" href="favicon.ico" />
-  <title>PortFolio P.G.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/styles/style_global.css"/>
+    <link rel="stylesheet" href="src/styles/style_projets.css"/>
+    <link rel="stylesheet" href="src/styles/variables.css"/>
+    <link rel="icon" href="favicon.ico" />
+    <title>Projets</title>
 </head>
 <body>
-<!-- NavBar -->
-<nav class="mb-3" id="menu">
-  <a href="index.html" >Accueil</a>
-  <a href="formations.html">Formations</a>
-  <a href="projets.html">Projets</a>
-  <a href="veille.html">Veille</a>
-  <div class="animation start-projet"></div>
-</nav>
 
-<!-- Body -->
-<main class="container mt-5">
-  <h1 class="text-center text-white mb-5 titre">Projets</h1>
-  <div class="row justify-content-start">
+<div class="container">
+    <header class="header-projets">
+        <a href="index.html#section-projets"><i class="bi bi-arrow-left-square"></i></a>
+        <h1 class="fw-bold">Mes Projets</h1>
+    </header>
 
-    <!-- Un projet -->
-    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-      <!-- lien details -->
-      <a href="#Inscription-Judo">
-        <!-- image de fond -->
-        <div class="card text-white card-has-bg click-col" style="background-image: url('src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-accueil.png'); background-size: cover;">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <small class="card-meta mb-2">En stage de 2e année de BUT</small>
-              <h4 class="card-title mt-0 ">Inscription - Judo de Vesoul</h4>
+    <div class="projects-container">
+        <h2 class="titre-section-projets">En satge de 2<sup>e</sup> année de BUT</h2>
+        <!-- Projet 1 -->
+        <div class="project" id="projet-inscription-judo">
+            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-accueil.png" alt="Projet Inscription - Judo de Vesoul">
+            <div class="project-content">
+                <h3>Inscription - Judo de Vesoul</h3>
+                <p>Application développée pour la gestion des inscriptions au club de Judo de Vesoul, utilisant Next.js et React.js pour une interface utilisateur dynamique et performante.</p>
+                <div class="class-lien-projet">
+                    <a href="src/projets/projet-stage-judo.html" class="button">Voir en détail</a>
+                </div>
             </div>
-          </div>
         </div>
-      </a>
+
+        <!-- Projet 2 -->
+        <h2 class="titre-section-projets">En stage de 2<sup>e</sup> année de BTS</h2>
+        <div class="project" id="projet-stage-1">
+            <img src="src/assets/stage1-eurydice-accueil-client/accueil.png" alt="Accueil Client chez Eurydice">
+            <div class="project-content">
+                <h3>Accueil Client chez Eurydice</h3>
+                <p>Site permettant à l'entreprise Eurydice d'enregistrer un nouveau client sans passer par le site Dolibarr, grâce à l'utilisation de son API. Il est possible d'accéder à tous les clients de l'entreprise ainsi que de créer un diagnostic.</p>
+                <div class="class-lien-projet">
+                    <a href="src/projets/projet-stage-accueil-client.html" class="button">Voir en détail</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="titre-section-projets">En  2<sup>e</sup> année de BTS</h2>
+        <!-- Projet 3 -->
+        <div class="project" id="projet-tourisme">
+            <img src="src/assets/fc-tourisme/accueil.png" alt="Projet 2">
+            <div class="project-content">
+                <h3>FC Tourisme</h3>
+                <p>Site web conçu pour promouvoir le tourisme en Franche-Comté, développé avec Symfony et PHP, offrant une interface utilisateur conviviale grâce à Twig.</p>
+                <div class="class-lien-projet">
+                    <a href="src/projets/projet-fc-tourisme.html" class="button">Voir en détail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project" id="projet-blog">
+            <img src="src/assets/blog/accueil.png" alt="Blog">
+            <div class="project-content">
+                <h3>Blog</h3>
+                <p>Ce projet est un blog qui organise des articles par catégories, permettant l'ajout d'articles et de commentaires, développé avec Symfony, PHP et Twig pour une gestion efficace du contenu.</p>
+                <div class="class-lien-projet">
+                    <a href="src/projets/projet-blog.html" class="button">Voir en détail</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="project" id="projet-quiz">
+            <img src="src/assets/quiz/accueil.png" alt="API Quiz et Jeu Quiz">
+            <div class="project-content">
+                <h3>API Quiz et Jeu Quiz</h3>
+                <p>Ce site permet aux utilisateurs de jouer à un quiz en choisissant la catégorie et le nombre de questions. Le site est implémenté en JavaScript et consomme une API Symfony.</p>
+                <div class="class-lien-projet">
+                    <a href="src/projets/projet-quiz.html" class="button">Voir en détail</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Un projet -->
-    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-      <!-- lien details -->
-      <a href="#FC-Tourisme">
-        <!-- image de fond -->
-        <div class="card text-white card-has-bg click-col" style="background-image: url('src/assets/fc-tourisme/accueil.png'); background-size: cover;">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <small class="card-meta mb-2">En BTS SIO 2e année</small>
-              <h4 class="card-title mt-0 ">FC Tourisme</h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
+    <div id="footer-container"></div>
 
-    <!-- Un projet -->
-    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-      <!-- lien details -->
-      <a href="#blog">
-        <!-- image de fond -->
-        <div class="card text-white card-has-bg click-col" style="background-image: url('src/assets/blog/accueil.png'); background-size: cover;">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <small class="card-meta mb-2">En BTS SIO 2eme année</small>
-              <h4 class="card-title mt-0 ">Blog</h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
+</div>
 
-    <!-- Un projet -->
-    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-      <!-- lien details -->
-      <a href="#accueilClient">
-        <!-- image de fond -->
-        <div class="card text-white card-has-bg click-col" style="background-image: url('src/assets/stage1-eurydice-accueil-client/page.png'); background-size: cover;">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <small class="card-meta mb-2">En Stage de BTS 2e année</small>
-              <h4 class="card-title mt-0 ">Accueil Client</h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Un projet -->
-    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-      <!-- lien details -->
-      <a href="#Quiz">
-        <!-- image de fond -->
-        <div class="card text-white card-has-bg click-col" style="background-image: url('src/assets/quiz/accueil.png'); background-size: cover;">
-          <div class="card-img-overlay d-flex flex-column">
-            <div class="card-body">
-              <small class="card-meta mb-2">En BTS SIO 2e année</small>
-              <h4 class="card-title mt-0 ">API Quiz et Jeu Quiz</h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="titreProjet" id="Inscription-Judo">Inscription - Judo de Vesoul</h2>
-    <div class="row mb-3">
-      <div id="carouselInscription-Judo" class="col-12 col-md-7 carousel carousel-dark slide mb-2">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-accueil.png" class="d-block w-100" alt="Page d'accueil du site">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-recherche.png" class="d-block w-100" alt="Page de recherche adhérent">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-nom.png" class="d-block w-100" alt="Page de création/modification d'adhérent">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-coordonnees.png" class="d-block w-100" alt="Page de création/modification d'adhérent">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-adresse.png" class="d-block w-100" alt="Page de création/modification d'adhérent">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-adherent-indo-sup.png" class="d-block w-100" alt="Page de création/modification d'adhérent">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-gestion-responsable-vide.png" class="d-block w-100" alt="Page de gestion des responsables">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-nom.png" class="d-block w-100" alt="Page de création/modification d'un responsable">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-adresse.png" class="d-block w-100" alt="Page de création/modification d'un responsable">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-coordonnees-vide.png" class="d-block w-100" alt="Page de création/modification d'un responsable">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-coordonnees.png" class="d-block w-100" alt="Page de création/modification d'un responsable">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-responsable-recevoir.png" class="d-block w-100" alt="Page de création/modification d'un responsable">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-gestion-responsable.png" class="d-block w-100" alt="Page de gestion des responsables">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-message-questionnaire.png" class="d-block w-100" alt="Page de message pour données le questionnaire de santé">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-reponce-questionnaire.png" class="d-block w-100" alt="Page de demande sur l'état de santé">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-message-oui-questionnaire.png" class="d-block w-100" alt="Page de message sur l'état de santé">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-message-non-questionnaire.png" class="d-block w-100" alt="Page de message sur l'état de santé">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-form-cotisation.png" class="d-block w-100" alt="Page de cotisation">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/stage2-eurydice-judo/ecran-inscription-judo/judo-fin.png" class="d-block w-100" alt="Page de fin de l'inscription">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselInscription-Judo" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselInscription-Judo" data-bs-slide="next">
-          <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="col-12 col-md-5">
-        <div class="row justify-content-center">
-          <div class="col-12 encadrementSombre infoProjet mb-2">
-            <a href="projets/stage-eurydice-judo.html"><i class="buttonPlus bi bi-plus-circle"></i></a>
-            <h3>Description</h3>
-            <p class="mb-0">
-              Ce site permet aux encadrants du Judo de Vesoul d'inscrire chaque adhérent dans Dolibarr grâce à son API.
-              Ainsi, l'adhérent reçoit par email sa facture et les documents à retourner tels que l'attestation de santé ou un certificat médical.
-              <br> <br>
-              Cela permet au club de Judo de regrouper toutes les informations au même endroit et de facturer les licences de judo selon la catégorie.
-            </p>
-            <h3 class="mt-3">Outils utilisés</h3>
-            <div class="row">
-              <div class="col-6">
-                <h5 class="mb-0">Framework :</h5>
-                <p class="mb-1">&ensp; Next.js</p>
-                <h5 class="mb-0">Langage :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-js"></i> Javascript</p>
-              </div>
-              <div class="col-6">
-                <h5 class="mb-0">Bibliothèque JS :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-jsx"></i> React.js</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="titreProjet" id="FC-Tourisme">FC Tourisme</h2>
-    <div class="row mb-3">
-      <div id="carouselFC-Tourisme" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="src/assets/fc-tourisme/accueil.png" class="d-block w-100" alt="Page d'accueil du site FC Tourisme">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/fc-tourisme/page-login.png" class="d-block w-100" alt="Page de connexion">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/fc-tourisme/page-creation-utilisateur.png" class="d-block w-100" alt="Page de création d'utilisateur">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/fc-tourisme/etablissements-utilisateur-connecter.png" class="d-block w-100" alt="Page affichant les différents établissement disponible">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/fc-tourisme/etablissement-utilisateur-connecter.png" class="d-block w-100" alt="Détail d'un établissement">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/fc-tourisme/favoris.png" class="d-block w-100" alt="Page affichant les différents établissement mis en favoris">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFC-Tourisme" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselFC-Tourisme" data-bs-slide="next">
-          <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="col-12 col-md-5">
-        <div class="row justify-content-center">
-          <div class="col-12 encadrementSombre infoProjet mb-2">
-            <h3>Description</h3>
-            <p class="mb-0">
-              FC Tourisme permet de mettre en avant des établissements de la région Franche Comté afin de mieux les connaître.
-              <br> <br>
-              Les utilisateurs peuvent se créer un compte pour pouvoir mettre en favoris les établissements qu'ils veulent retrouver facilement.
-            </p>
-            <h3 class="mt-3">Outils utilisés</h3>
-            <div class="row">
-              <div class="col-6">
-                <h5 class="mb-0">Framework :</h5>
-                <p class="mb-1">&ensp; Symfony</p>
-                <h5 class="mb-0">Gestion de projet :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-trello"></i> Trello</p>
-              </div>
-              <div class="col-6">
-                <h5 class="mb-0">Langage :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-php"></i> PHP</p>
-                <p class="mb-1">&ensp; <i class="bi bi-file-earmark"></i> Twig</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="titreProjet" id="blog">Blog</h2>
-    <div class="row mb-3">
-      <div id="carouselBlog" class="col-12 col-md-7 carousel carousel-dark slide mb-2" >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="src/assets/blog/accueil.png" class="d-block w-100" alt="Page d'accueil du site Blog">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/liste-articles.png" class="d-block w-100" alt="Page avec la liste des articles du site Blog">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/ajoute-article.png" class="d-block w-100" alt="Page pour ajouter un article">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/categories.png" class="d-block w-100" alt="Page avec les catégories d'articles du site Blog">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/liste-articles-categorie.png" class="d-block w-100" alt="Page avec les articles d'une categories du site Blog">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/article.png" class="d-block w-100" alt="Page avec le détail d'un artcile du site Blog">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/modale-commentaire.png" class="d-block w-100" alt="Modale qui affiche les commentaires d'un articles">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/blog/contact.png" class="d-block w-100" alt="Page contact site Blog">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlog" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlog" data-bs-slide="next">
-          <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="col-12 col-md-5">
-        <div class="row justify-content-center">
-          <div class="col-12 encadrementSombre mb-2 infoProjet">
-            <h3>Description</h3>
-            <p class="mb-0">
-              Ce projet est un blog qui organise des articles par catégories.
-              Il permet l'ajout d'articles ainsi que de commentaires.
-            </p>
-            <h3 class="mt-3">Outils utilisés</h3>
-            <div class="row">
-              <div class="col-6">
-                <h5 class="mb-0">Framework :</h5>
-                <p class="mb-1">&ensp; Symfony</p>
-              </div>
-              <div class="col-6">
-                <h5 class="mb-0">Langage :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-php"></i> PHP</p>
-                <p class="mb-1">&ensp; <i class="bi bi-file-earmark"></i> Twig</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="titreProjet" id="accueilClient">Accueil Client chez Eurydice</h2>
-    <div class="row mb-3">
-      <div class="col-12 col-md-7">
-        <video class="col-12" id="videoStage" controls>
-          <source src="src/assets/stage1-eurydice-accueil-client/accueil-client-video.mp4" type=video/mp4>
-        </video>
-      </div>
-      <div class="col-12 col-md-5">
-        <div class="row justify-content-center">
-          <div class="col-12 encadrementSombre mb-2 infoProjet">
-            <h3>Description</h3>
-            <p class="mb-0">
-              Site permettant à l'entreprise Eurydice d'enregistrer un nouveau client sans passer par le site Doliabrr*,
-              grâce à l'utilisation d'une API proposé par Doliarr. <br> <br>
-              Il est possible d'accéder à tous les clients de l'entreprise ainsi que de créer un diagnostic
-              c'est-à-dire une analyse du matériel informatique client pour trouver la solution au problème rencontré par un client.
-            </p>
-            <br>
-            <p class="mb-0">
-              * Dolibarr : c'est est un progiciel de gestion intégré et gestion de la relation client open source pour les entreprises.
-            </p>
-            <h3 class="mt-3">Outils utilisés</h3>
-            <div class="row">
-              <div class="col-6">
-                <h5 class="mb-0">API :</h5>
-                <p class="mb-1">&ensp;Utilisation de l'API Dolibarr</p>
-              </div>
-              <div class="col-6">
-                <h5 class="mb-0">Langage :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-php"></i> PHP</p>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-js"></i> Javascript</p>
-                <p class="mb-1">&ensp; <i class="bi bi-file-earmark"></i> Twig</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="titreProjet" id="Quiz">API Quiz et Jeu Quiz</h2>
-    <div class="row mb-3">
-      <div id="carouselQuiz" class="col-12 col-md-7 carousel carousel-dark slide mb-2" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="src/assets/quiz/accueil.png" class="d-block w-100" alt="Page d'accueil du site avec la selection de la catégorie et du nombre de questions">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/quiz/affichage-questions.png" class="d-block w-100" alt="affichage du quiz">
-          </div>
-          <div class="carousel-item">
-            <img src="src/assets/quiz/correction-score.png" class="d-block w-100" alt="Page affichant la correction et le score">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselQuiz" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselQuiz" data-bs-slide="next">
-          <span class="carousel-control-next-icon carousel-dark-control-icon-filter" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="col-12 col-md-5">
-        <div class="row justify-content-center">
-          <div class="col-12 encadrementSombre infoProjet mb-2">
-            <h3>Description</h3>
-            <p class="mb-0">
-              Ce site permet aux utilisateurs de jouer à un quiz. <br>
-              L'utilisateur peut choisir la catégorie du quiz ainsi que le nombre de questions. <br> <br>
-              Ce site est implémenté en Javascript, qui consomme un API Symfony. Cette API REST propose deux endpoints un
-              pour récupérer les catégories et l'autre pour les questions et réponses en fonction d'un nombre de questions demandé.
-            </p>
-            <h3 class="mt-3">Outils utilisés</h3>
-            <div class="row">
-              <div class="col-6">
-                <h5 class="mb-0">Framework :</h5>
-                <p class="mb-1">&ensp; Symfony pour l'API</p>
-              </div>
-              <div class="col-6">
-                <h5 class="mb-0">Langage :</h5>
-                <p class="mb-1">&ensp; <i class="bi bi-filetype-js"></i> JavaScript</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</main>
+<script src="src/scripts/footer.js"></script>
 </body>
 </html>
