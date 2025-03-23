@@ -129,10 +129,15 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel img {
+.carousel-container img,
+.carousel-container video {
     width: 100%;
     flex: 0 0 100%;
     border-radius: 4px;
+}
+
+.carousel-video {
+    object-fit: cover;
 }
 
 .carousel-controls {
