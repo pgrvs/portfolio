@@ -79,6 +79,12 @@
     margin-top: 5px;
 }
 
+.text-figure {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+}
+
 .section h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -112,6 +118,31 @@
 
 .attachment-link:active {
     transform: translateY(0);
+}
+
+.div-image {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.div-image-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div-image-container img,
+.div-image-container video {
+    width: 100%;
+    flex: 0 0 100%;
+    border-radius: 4px;
+}
+
+.div-image-container {
+    object-fit: cover;
 }
 
 /* CARROUSEL */

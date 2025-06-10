@@ -34,6 +34,18 @@
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.banniere-info-projet {
+    position: absolute;
+    background: linear-gradient(to right, var(--banniere-color-1), var(--banniere-color-2));
+    top: 40px;
+    left: 0;
+    padding: 2px 5px;
+    margin: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .project img {
@@ -54,7 +66,7 @@
     margin-bottom: 10px;
 }
 
-.project p {
+.project-content p {
     opacity: 0.7;
     margin-bottom: 10px;
 }

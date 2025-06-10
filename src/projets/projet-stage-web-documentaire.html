@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web documentaire - Mémoire ouvière du pays de Monbéliard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style_global.css"/>
+    <link rel="stylesheet" href="../styles/style_detail_projet.css"/>
+    <link rel="stylesheet" href="../styles/variables.css"/>
+    <link rel="icon" href="../../favicon.ico" />
+</head>
+<body>
+<div class="container">
+    <header class="header-detail">
+        <div class="div-retour-header">
+            <a id="dynamic-back-link" data-section-id="projet-web-documentaire">
+                <i class="bi bi-arrow-left-square"></i>
+            </a>
+        </div>
+        <div>
+            <h1 class="fw-bold">Web documentaire - Mémoire ouvière du pays de Monbéliard</h1>
+            <p>Stage de 3<sup>e</sup> année de BUT Informatique</p>
+        </div>
+    </header>
+
+    <div class="section">
+        <h3>Sujet du projet</h3>
+        <p>
+            Le stage avait pour objectif principal de contribuer à la valorisation numérique d’un patrimoine
+            culturel, en lien avec les recherches menées par le laboratoire ELLIADD. Il s’inscrivait dans le cadre du
+            développement d’un
+            webdocumentaire intitulé Des Mémoires ouvrières aux <i>Mémoires de l’Enclave</i>, centré sur l’œuvre
+            de Jean-Paul Goux. Ce projet visait à rendre accessibles un ensemble de documents, sonores et iconographiques
+            à travers une interface web.
+            Mon rôle consistait à participer à la finalisation de cet outil de médiation numérique, en assurant la
+            mise à jour des versions utilisées, ajouter des pages manquantes et en revoyant le modèle de données.
+
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Informations techniques</h3>
+        <p>
+            Le projet repose sur l’utilisation de technologies web récentes, mises en place par le précédent
+            stagiaire. Le site est développé avec <strong>Astro</strong>, un framework JavaScript conçu pour générer des pages
+            statiques. La gestion des contenus est assurée par <strong>Payload CMS</strong>, un système écrit en JavaScript qui
+            permet de définir des structures de données personnalisées. Ces définitions configurent à la fois
+            la base de données <strong>PostgreSQL</strong> et l’interface d’administration, utilisée pour créer, modifier et
+            organiser les documents du webdocumentaire. Cette interface permet une gestion centralisée des contenus.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Déroulement du stage</h3>
+        <ul>
+            <li>
+                <strong>Prise en main du projet :</strong> installation de l’environnement local, compréhension de l’architecture existante,
+                étude des choix techniques réalisés par le précédent stagiaire, et définition des axes d’amélioration avec
+                l’équipe encadrante.
+            </li>
+            <li>
+                <strong>Stabilisation du site et amélioration de l’interface :</strong> corrections de bugs d’affichage, amélioration de
+                la navigation entre les documents, enrichissement de certaines pages (thématiques, lieux, documentaires),
+                et harmonisation des composants visuels avec Astro.
+            </li>
+            <li>
+                <strong>Reprise de la configuration du CMS :</strong> refonte complète de la structure des collections dans Payload CMS pour
+                mieux organiser les données, optimiser la saisie des documents et faciliter l’import.
+            </li>
+            <li>
+                <strong>Développement de l’import de documents :</strong> création d’un formulaire d’import dans l’interface d’administration
+                permettant de charger un fichier Excel et des fichiers médias associés, avec vérifications automatiques
+                et retour d’erreurs.
+            </li>
+            <li>
+                <strong>Mise en production :</strong> adaptation du projet à l’environnement de l’université, déploiement sur
+                une machine virtuelle, configuration du routage, tests en conditions réelles, et rédaction
+                d’une documentation technique.
+            </li>
+            <li>
+                <strong>Finalisation :</strong> ajustements graphiques, hiérarchisation des contenus, création de
+                nouvelles pages, corrections des derniers dysfonctionnements, et bilan de fin de stage avec l’équipe.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Interface web documentaire</h3>
+
+        <div class="div-image">
+            <div class="div-image-container">
+                <img src="../assets/stage3-web-documentaire/astro-page-thematiques.jpg" alt="Page de thématiques">
+            </div>
+        </div>
+
+        <p class="text-figure">
+            Figure 1 : Page des thématiques – interface web documentaire
+        </p>
+
+        <p>
+            Dans le cadre de mon stage, j’ai été chargé de concevoir plusieurs pages du web documentaire, en utilisant le framework Astro, que je n’avais jamais utilisé auparavant.
+        </p>
+
+        <p>
+            La figure ci-dessus montre une des pages principales du site : celle dédiée aux thématiques.
+            L’objectif de cette page était de regrouper de manière structurée des ensembles de documents (images, audios, vidéos),
+            en les associant à une organisation thématique pour l’utilisateur.
+        </p>
+
+        <p>
+            À partir du design de départ et des objectifs fonctionnels définis avec mon tuteur,
+            j’ai dû construire cette page en réutilisant plusieurs composants Astro spécifiques,
+            comme un composant <code>Carrousel.astro</code> permettant de faire défiler les documents liés à chaque sous-thématique,
+            ou encore une barre de navigation latérale réutilisable (<code>Header.astro</code>).
+        </p>
+
+        <p>
+            Comme le framework Astro n’avait pas été étudié durant ma formation à l’IUT, j’ai dû me former de manière autonome.
+            J’ai commencé par suivre la documentation officielle et j’ai ensuite expérimenté des pages prototypes
+            afin de comprendre comment importer et passer des <em>props</em> entre composants,
+            gérer le contenu dynamique (via <code>fetch</code> ou intégration CMS) et organiser le rendu statique optimisé.
+        </p>
+
+        <p>
+            Sur la figure, on voit que chaque bloc thématique contient un titre,
+            un ensemble de sous-thématiques avec image,
+            et un carrousel permettant de naviguer latéralement.
+        </p>
+
+        <p>
+            Le tout a été réalisé en structurant les données reçues du CMS Payload,
+            en les passant au composant principal de la page via les <code>props</code>,
+            puis en générant dynamiquement les sections avec des boucles.
+        </p>
+
+        <p>
+            Le défi principal a été de rendre cette page modulaire et réutilisable dans d’autres contextes du site,
+            notamment en anticipant la future évolution des thématiques ou leur regroupement.
+        </p>
+
+        <p>
+            Cela m’a permis de mettre en œuvre des savoirs acquis à l’IUT (structuration d’un projet web, intégration de composants)
+            mais aussi d’acquérir de nouveaux savoirs-faire, notamment sur Astro.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Nouvelle structure des collections dans Payload CMS</h3>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <img src="../assets/stage3-web-documentaire/formulaire-docuemnt-1.jpg" alt="Formulaire admin d'un docuemnt - Partie 1">
+                <img src="../assets/stage3-web-documentaire/formulaire-docuemnt-2.jpg" alt="Formulaire admin d'un docuemnt - Partie 2">
+                <img src="../assets/stage3-web-documentaire/formulaire-docuemnt-3.jpg" alt="Formulaire admin d'un docuemnt - Partie 3">
+                <img src="../assets/stage3-web-documentaire/formulaire-docuemnt-4.jpg" alt="Formulaire admin d'un docuemnt - Partie 4">
+            </div>
+            <div class="carousel-controls">
+                <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
+                <button class="nextBtn"><i class="bi bi-chevron-compact-right"></i></button>
+            </div>
+        </div>
+
+        <p class="text-figure">
+            Figure 2 : Restructuration de la collection document
+        </p>
+
+        <p>
+            Durant mon stage, j’ai participé à une restructuration complète des collections dans Payload CMS,
+            en particulier celle des documents.
+            Le modèle précédent contenait des champs mal organisés, parfois redondants ou inutiles,
+            et ne permettait pas de refléter correctement la richesse et la diversité des documents à indexer.
+            Il n’était pas adapté aux besoins de structuration documentaire du projet.
+        </p>
+
+        <p>
+            Cette restructuration a été décidée avec l’équipe encadrante,
+            après observation des limites du schéma existant.
+            L’objectif était de proposer un modèle de données plus clair, cohérent et évolutif,
+            en lien avec les usages éditoriaux, la navigation front, et les futurs besoins d’import et d’export.
+        </p>
+
+        <p>
+            J’ai dû apprendre à utiliser Payload CMS, en comprenant notamment :
+        </p>
+
+        <ul>
+            <li>comment sont structurées les collections et les groupes de champs,</li>
+            <li>comment créer des relations entre collections pour remplacer certains champs texte libres (par exemple types de documents, lieux, couleurs, etc.),</li>
+            <li>comment organiser les champs pour améliorer la clarté de l’interface d’administration (en regroupant par sections comme identification, contexte, caractéristiques physiques, etc.),</li>
+            <li>et comment aligner cette structure avec la logique de l’API de Payload.</li>
+        </ul>
+
+        <p>
+            Cette étape a mobilisé des savoirs abordés en cours à l’IUT,
+            comme la modélisation de données et la structuration d’un back-office,
+            mais m’a aussi permis de développer des savoir-faire spécifiques à un CMS headless,
+            notamment en configurant une base orientée contenu complexe dans un cadre professionnel.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Création d’un formulaire d’import Excel</h3>
+
+        <div class="div-image">
+            <div class="div-image-container">
+                <img src="../assets/stage3-web-documentaire/payloadcms-formulaire-import.jpg" alt="Forumlaire d'import - Payload cms">
+            </div>
+        </div>
+
+        <p class="text-figure">
+            Figure 3 : Forumlaire d'import - Payload cms
+        </p>
+
+        <p>
+            Pour faciliter l’enrichissement de la base de données documents dans le projet <em>Mémoires Ouvrières</em>,
+            j’ai mis en place un formulaire d’importation personnalisé, visible sur la figure ci-dessus.
+        </p>
+
+        <p>
+            Cette fonctionnalité est devenue nécessaire, car le site comporte actuellement plus de 500 documents,
+            et leur saisie manuelle dans l’interface d’administration aurait été trop longue et source d’erreurs.
+        </p>
+
+        <p>
+            Le formulaire permet de téléverser à la fois :
+        </p>
+
+        <ul>
+            <li>un fichier Excel décrivant les métadonnées des documents,</li>
+            <li>et les fichiers eux-mêmes (images, PDF, etc.).</li>
+        </ul>
+
+        <p>
+            J’ai conçu cette fonctionnalité en combinant un composant React à une vue personnalisée dans Payload CMS 3.
+            Les données sont structurées via un objet <code>FormData</code>, contenant deux champs :
+            <code>excel</code> (fichier Excel) et <code>documents[]</code> (fichiers multiples).
+            Ce <code>FormData</code> est ensuite envoyé vers une route API que j’ai ajoutée côté serveur dans Payload.
+        </p>
+
+        <p>
+            Pour lire et interpréter le contenu du fichier Excel, j’ai utilisé la bibliothèque <code>exceljs</code>,
+            qui permet d’analyser les lignes et colonnes, de reconstruire les objets de données,
+            et de les faire correspondre aux champs complexes de la collection documents
+            (groupes imbriqués, relations multiples, etc.).
+        </p>
+
+        <p>
+            Ce travail a mobilisé des savoirs acquis à l’IUT (gestion de formulaires, communication client/serveur via API REST),
+            mais également de nouveaux savoirs-faire, notamment :
+        </p>
+
+        <ul>
+            <li>l’utilisation avancée de <code>FormData</code> pour envoyer simultanément fichiers et métadonnées,</li>
+            <li>l’exploitation de la bibliothèque <code>exceljs</code> pour lire dynamiquement un fichier Excel et en extraire les données structurées,</li>
+            <li>la capacité à interagir avec l’API de Payload pour créer automatiquement des documents valides à partir des données traitées.</li>
+        </ul>
+
+        <p>
+            Le fichier modèle utilisé pour l’import :
+            <a href="../assets/stage3-web-documentaire/modele_import_documents.xlsx" class="button">modele_import_documents.xlsx</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Outils utilisés</h3>
+        <ul class="technologies-list">
+            <li><strong>Frameworks :</strong> Astro, Payload CMS</li>
+            <li><strong>Base de données :</strong> PostgreSQL</li>
+            <li><strong>Langages :</strong> HTML, CSS, JavaScript</li>
+            <li><strong>API :</strong> Payload CMS</li>
+        </ul>
+    </div>
+
+    <div id="footer-container"></div>
+
+</div>
+
+<script src="../scripts/footer.js"></script>
+<script src="../scripts/carousel.js"></script>
+<script src="../scripts/retour.js"></script>
+
+</body>
+</html>
