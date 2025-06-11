@@ -52,7 +52,7 @@ a:focus {
 /* Conteneur du switch — plus besoin de display:flex ici */
 .theme-toggle {
     position: relative;
-    width: 65px;
+    width: 60px;
     height: 26px;
 }
 
@@ -79,7 +79,7 @@ a:focus {
     position: absolute;
     top: 2px;    /* centrer verticalement */
     left: 2px;   /* espace depuis le bord gauche */
-    width: 37px; /* largeur du knob */
+    width: 32px; /* largeur du knob */
     height: 22px;/* hauteur du knob, un peu plus fine que le track */
     background-color: #fff;
     border-radius: 30px; /* demi-hauteur pour un ovale parfait */
