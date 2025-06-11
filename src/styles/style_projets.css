@@ -40,6 +40,7 @@
 .banniere-info-projet {
     position: absolute;
     background: linear-gradient(to right, var(--banniere-color-1), var(--banniere-color-2));
+    color: white;
     top: 40px;
     left: 0;
     padding: 2px 5px;
