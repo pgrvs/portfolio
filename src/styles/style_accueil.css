@@ -208,7 +208,7 @@
 
 .card-label {
     position: absolute;
-    top: 206px;
+    bottom: 80px;
     left: 10px;
     background: var(--background-card-label);
     color: var(--white-color);
