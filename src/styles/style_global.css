@@ -42,6 +42,59 @@ a:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.theme-row {
+    display: flex;                /* active le mode flex */
+    justify-content: space-between; /* espace les enfants aux extrémités */
+    align-items: center;          /* aligne verticalement */
+    margin-bottom: 16px;
+}
+
+/* Conteneur du switch — plus besoin de display:flex ici */
+.theme-toggle {
+    position: relative;
+    width: 65px;
+    height: 26px;
+}
+
+/* Masquer la checkbox native */
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Track du switch */
+.theme-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #3a3a3a;
+    border-radius: 999px;         /* track parfaitement arrondi */
+    transition: background-color 0.3s;
+}
+
+/* Knob ovale */
+.theme-toggle .slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;    /* centrer verticalement */
+    left: 2px;   /* espace depuis le bord gauche */
+    width: 37px; /* largeur du knob */
+    height: 22px;/* hauteur du knob, un peu plus fine que le track */
+    background-color: #fff;
+    border-radius: 30px; /* demi-hauteur pour un ovale parfait */
+    transition: transform 0.3s;
+}
+
+/* État ON */
+.theme-toggle input:checked + .slider {
+    background: linear-gradient(to right, var(--banniere-color-2), var(--banniere-color-1));
+}
+
+.theme-toggle input:checked + .slider::before {
+    transform: translateX(24px); /* déplace l’ovale à droite */
+}
+
 .footer {
     background: var(--background-element-color);
     padding: 20px;
@@ -60,7 +113,7 @@ a:focus {
     margin: 5px 0;
 
     a {
-        color: white;
+        color: var(--white-color);
     }
 }
 

@@ -2,11 +2,32 @@
     --background-page-color: #191919;
     --white-color: #fff;
     --background-element-color: #252525;
+    --attachment-tag: #3e3e3e;
+    --background-card: #1e1e1e;
+    --background-card-label: #33333399;
+    --background-card-body: #242424;
     --box-color: #2e2e2e;
     --button-hover-color: #424141;
     --attachment-color: #4a4a4a;
     --carousel-control-color: #404040;
     --carousel-control-hover-color: #616161;
+    --banniere-color-1: #007806;
+    --banniere-color-2: #00c306;
+}
+
+:root[data-theme="light"] {
+    --background-page-color: #f0f0f0;
+    --white-color: #000;
+    --background-element-color: #ffffff;
+    --attachment-tag: #dcdcdc;
+    --background-card: #ffffff;
+    --background-card-label: #cccccc;
+    --background-card-body: #f9f9f9;
+    --box-color: #e0e0e0;
+    --button-hover-color: #c0c0c0;
+    --attachment-color: #bcbcbc;
+    --carousel-control-color: #aaaaaa;
+    --carousel-control-hover-color: #888888;
     --banniere-color-1: #007806;
     --banniere-color-2: #00c306;
 }
