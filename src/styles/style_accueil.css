@@ -180,21 +180,6 @@
     justify-content: space-between;
     margin-bottom:20px;
     align-items: center;
-
-    a {
-        color: #fff;
-        text-decoration: none;
-        border: 1px solid #fff;
-        border-radius: 4px;
-        transition: background-color 0.2s ease-in-out;
-        padding: 5px 7px;
-    }
-
-    a:hover{
-        background-color: #373737;
-        transition: background-color 0.2s ease-in-out;
-        text-decoration: none;
-    }
 }
 
 .projects h3 {

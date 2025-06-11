@@ -38,16 +38,12 @@
         align-items: start;
     }
 
-    a{
-        margin: 0 0 20px 0;
-    }
-
     .header-detail p {
         margin-bottom: 10px;
     }
 }
 
-.div-titre-\&-github-link {
+.div-titre-\&-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +53,7 @@
         margin-bottom: 0;
     }
 
-    a {
+    .icone {
         color: var(--white-color);
         margin: 0 8px 0 0;
         transition: transform 0.3s ease-out;
@@ -67,7 +63,7 @@
         }
     }
 
-    a:hover {
+    .icone:hover {
         transform: scale(1.2);
     }
 }
