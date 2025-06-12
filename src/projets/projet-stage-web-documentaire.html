@@ -35,7 +35,7 @@
             culturel, en lien avec les recherches menées par le laboratoire ELLIADD. Il s’inscrivait dans le cadre du
             développement d’un
             webdocumentaire intitulé Des Mémoires ouvrières aux <i>Mémoires de l’Enclave</i>, centré sur l’œuvre
-            de Jean-Paul Goux. Ce projet visait à rendre accessibles un ensemble de documents, sonores et iconographiques
+            de Jean-Paul Goux <i>Mémoires de l’Enclave</i> de 1986. Ce projet vise à rendre accessibles un ensemble de documents, sonores et iconographiques
             à travers une interface web.
             Mon rôle consistait à participer à la finalisation de cet outil de médiation numérique, en assurant la
             mise à jour des versions utilisées, en ajoutant des pages manquantes et en revoyant le modèle de données.
@@ -48,7 +48,7 @@
         <p>
             Le projet repose sur l’utilisation de technologies web récentes, mises en place par le précédent
             stagiaire. Le site est développé avec <strong>Astro</strong>, un framework JavaScript conçu pour générer des pages
-            statiques. La gestion des contenus est assurée par <strong>Payload CMS</strong>, un système écrit en JavaScript qui
+            statiques. La gestion des contenus est assurée par <strong>Payload CMS</strong>, un framework JavaScript qui
             permet de définir des structures de données personnalisées. Ces définitions configurent à la fois
             la base de données <strong>PostgreSQL</strong> et l’interface d’administration, utilisée pour créer, modifier et
             organiser les documents du webdocumentaire. Cette interface permet une gestion centralisée des contenus.
@@ -110,7 +110,7 @@
         </p>
 
         <p>
-            La figure ci-dessus montre une des pages principales du site : celle dédiée aux thématiques.
+            La figure 1 ci-dessus montre une des pages principales du site : celle dédiée aux thématiques.
             L’objectif de cette page était de regrouper de manière structurée des ensembles de documents (images, audios, vidéos),
             en les associant à une organisation thématique pour l’utilisateur.
         </p>
@@ -118,15 +118,15 @@
         <p>
             À partir du design de départ et des objectifs fonctionnels définis avec mon tuteur,
             j’ai dû construire cette page en réutilisant plusieurs composants Astro spécifiques,
-            comme un composant <code>Carrousel.astro</code> permettant de faire défiler les documents liés à chaque sous-thématique,
-            ou encore une barre de navigation latérale réutilisable (<code>Header.astro</code>).
+            comme un composant <strong>ThematiqueCard.astro</strong> permettant d'afficher les différentes thématiques dans chaques Rubriques',
+            ou encore une barre de navigation latérale réutilisable <strong>Header.astro</strong> en haut à gauche de la figure 1.
         </p>
 
         <p>
             Comme le framework Astro n’avait pas été étudié durant ma formation à l’IUT, j’ai dû me former de manière autonome.
             J’ai commencé par suivre la documentation officielle et j’ai ensuite expérimenté des pages prototypes
-            afin de comprendre comment importer et passer des <em>props</em> entre composants,
-            gérer le contenu dynamique (via <code>fetch</code> ou intégration CMS) et organiser le rendu statique optimisé.
+            afin de comprendre comment importer et passer des props entre composants,
+            gérer le contenu dynamique (via l'API) et organiser le rendu statique optimisé.
         </p>
 
         <p>
@@ -137,7 +137,7 @@
 
         <p>
             Le tout a été réalisé en structurant les données reçues du CMS Payload,
-            en les passant au composant principal de la page via les <code>props</code>,
+            en les passant au composant principal de la page via les props,
             puis en générant dynamiquement les sections avec des boucles.
         </p>
 
@@ -193,15 +193,15 @@
 
         <ul>
             <li>comment sont structurées les collections et les groupes de champs,</li>
-            <li>comment créer des relations entre collections pour remplacer certains champs texte libres (par exemple types de documents, lieux, couleurs, etc.),</li>
-            <li>comment organiser les champs pour améliorer la clarté de l’interface d’administration (en regroupant par sections comme identification, contexte, caractéristiques physiques, etc.),</li>
+            <li>comment créer des relations entre collections pour remplacer certains champs texte libres (par exemple types de documents, types couleurs, etc.),</li>
+            <li>comment organiser les champs pour améliorer la clarté de l’interface d’administration que l'on peut voir sur la figure 2 (en regroupant par sections comme identification, contexte, caractéristiques physiques, etc.),</li>
             <li>et comment aligner cette structure avec la logique de l’API de Payload.</li>
         </ul>
 
         <p>
             Cette étape a mobilisé des savoirs abordés en cours à l’IUT,
             comme la modélisation de données et la structuration d’un back-office,
-            mais m’a aussi permis de développer des savoir-faire spécifiques à un CMS headless,
+            mais m’a aussi permis de développer des savoir-faire spécifiques à Payload CMS,
             notamment en configurant une base orientée contenu complexe dans un cadre professionnel.
         </p>
     </div>
@@ -221,7 +221,7 @@
 
         <p>
             Pour faciliter l’enrichissement de la base de données documents dans le projet <em>Mémoires Ouvrières</em>,
-            j’ai mis en place un formulaire d’importation personnalisé, visible sur la figure ci-dessus.
+            j’ai mis en place un formulaire d’importation personnalisé, visible sur la figure 3 ci-dessus.
         </p>
 
         <p>
@@ -239,14 +239,14 @@
         </ul>
 
         <p>
-            J’ai conçu cette fonctionnalité en combinant un composant React à une vue personnalisée dans Payload CMS 3.
-            Les données sont structurées via un objet <code>FormData</code>, contenant deux champs :
-            <code>excel</code> (fichier Excel) et <code>documents[]</code> (fichiers multiples).
-            Ce <code>FormData</code> est ensuite envoyé vers une route API que j’ai ajoutée côté serveur dans Payload.
+            J’ai conçu cette fonctionnalité en combinant un composant React à une vue personnalisée dans Payload CMS.
+            Les données sont structurées via un objet <strong>FormData</strong>, contenant deux champs :
+            <strong>excel</strong> (fichier Excel) et <strong>documents[]</strong> (fichiers multiples).
+            Ce <strong>FormData</strong> est ensuite envoyé vers une route de l'API de Payload CMS.
         </p>
 
         <p>
-            Pour lire et interpréter le contenu du fichier Excel, j’ai utilisé la bibliothèque <code>exceljs</code>,
+            Pour lire et interpréter le contenu du fichier Excel, j’ai utilisé la bibliothèque <strong>exceljs</strong>,
             qui permet d’analyser les lignes et colonnes, de reconstruire les objets de données,
             et de les faire correspondre aux champs complexes de la collection documents
             (groupes imbriqués, relations multiples, etc.).
@@ -258,8 +258,8 @@
         </p>
 
         <ul>
-            <li>l’utilisation avancée de <code>FormData</code> pour envoyer simultanément fichiers et métadonnées,</li>
-            <li>l’exploitation de la bibliothèque <code>exceljs</code> pour lire dynamiquement un fichier Excel et en extraire les données structurées,</li>
+            <li>l’utilisation avancée de <strong>FormData</strong> pour envoyer simultanément fichiers et métadonnées,</li>
+            <li>l’exploitation de la bibliothèque <strong>exceljs</strong> pour lire dynamiquement un fichier Excel et en extraire les données structurées,</li>
             <li>la capacité à interagir avec l’API de Payload pour créer automatiquement des documents valides à partir des données traitées.</li>
         </ul>
 
