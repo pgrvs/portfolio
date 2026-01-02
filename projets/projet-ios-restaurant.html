@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet IOS - Restaurant</title>
+
+    <title>Projet iOS Restaurant</title>
+    <meta name="description" content="Découvrez mon application iOS dédiée à la restauration.">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Paul Gravinese",
+            "url": "https://pgrvs.github.io/portfolio/",
+            "image": "https://pgrvs.github.io/portfolio/favicon.ico"
+        }
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Projet : iOS Restaurant">
+    <meta property="og:site_name" content="Paul Gravinese">
+    <meta property="og:image" content="https://pgrvs.github.io/portfolio/favicon.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="../scripts/init-theme.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../src/scripts/init-theme.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../styles/style_global.css"/>
-    <link rel="stylesheet" href="../styles/style_detail_projet.css"/>
-    <link rel="stylesheet" href="../styles/variables.css"/>
-    <link rel="icon" href="../../favicon.ico" />
+    <link rel="stylesheet" href="../src/styles/style_global.css"/>
+    <link rel="stylesheet" href="../src/styles/style_detail_projet.css"/>
+    <link rel="stylesheet" href="../src/styles/variables.css"/>
 </head>
 <body>
 <div class="container">
@@ -23,7 +45,7 @@
             </a>
         </div>
         <div>
-            <h1 class="fw-bold">Projet IOS - Restaurant</h1>
+            <h1 class="fw-bold">Projet iOS - Restaurant</h1>
             <p>En 3<sup>e</sup> année de BUT Informatique</p>
         </div>
     </header>
@@ -49,11 +71,11 @@
 
         <div class="carousel">
             <div class="carousel-container">
-                <img src="../assets/projet-ios-restaurant/pages-connexion-menu.jpg" alt="Page de connexion">
-                <img src="../assets/projet-ios-restaurant/pages-commandes.jpg" alt="Page de menu et panier">
-                <img src="../assets/projet-ios-restaurant/pages-pop-up-et-client.jpg" alt="Page du panier avec pop up de confirmation de commande et page client avec pop up de confirmation de changement de données personnelles">
+                <img src="../src/assets/projet-ios-restaurant/pages-connexion-menu.jpg" alt="Page de connexion">
+                <img src="../src/assets/projet-ios-restaurant/pages-commandes.jpg" alt="Page de menu et panier">
+                <img src="../src/assets/projet-ios-restaurant/pages-pop-up-et-client.jpg" alt="Page du panier avec pop up de confirmation de commande et page client avec pop up de confirmation de changement de données personnelles">
                 <video class="carousel-video" controls>
-                    <source src="../assets/projet-ios-restaurant/video-application-ios.mp4" type="video/mp4">
+                    <source src="../src/assets/projet-ios-restaurant/video-application-ios.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-controls">
@@ -81,9 +103,9 @@
         <h4>Exemple de données retourné par l'API</h4>
         <div class="carousel">
             <div class="carousel-container">
-                <img src="../assets/projet-ios-restaurant/exemple-donnees-client-retournes-par-API.png" alt="Exemple de données de clients retourné par API">
-                <img src="../assets/projet-ios-restaurant/exemple-donnees-menus-retournes-par-API.png" alt="Exemple de données des menus retourné par API">
-                <img src="../assets/projet-ios-restaurant/exemple-donnees-commandes-retournes-par-API.png" alt="Exemple de données des commandes retourné par API">
+                <img src="../src/assets/projet-ios-restaurant/exemple-donnees-client-retournes-par-API.png" alt="Exemple de données de clients retourné par API">
+                <img src="../src/assets/projet-ios-restaurant/exemple-donnees-menus-retournes-par-API.png" alt="Exemple de données des menus retourné par API">
+                <img src="../src/assets/projet-ios-restaurant/exemple-donnees-commandes-retournes-par-API.png" alt="Exemple de données des commandes retourné par API">
             </div>
             <div class="carousel-controls">
                 <button class="prevBtn"><i class="bi bi-chevron-compact-left"></i></button>
@@ -107,10 +129,10 @@
 
 </div>
 
-<script src="../scripts/footer.js"></script>
-<script src="../scripts/carousel.js"></script>
-<script src="../scripts/retour.js"></script>
-<script src="../scripts/theme-switcher.js"></script>
+<script src="../src/scripts/footer.js"></script>
+<script src="../src/scripts/carousel.js"></script>
+<script src="../src/scripts/retour.js"></script>
+<script src="../src/scripts/theme-switcher.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-stage-web-documentaire.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-fc-tourisme.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-ios-restaurant.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-stage-judo.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-stage-accueil-client.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-blog.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://pgrvs.github.io/portfolio/projets/projet-quiz.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

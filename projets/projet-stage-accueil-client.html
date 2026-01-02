@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil Client</title>
+
+    <title>Gestion Accueil Client - Paul Gravinese</title>
+    <meta name="description" content="Développement d'une interface de gestion d'accueil client.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Paul Gravinese",
+            "url": "https://pgrvs.github.io/portfolio/",
+            "image": "https://pgrvs.github.io/portfolio/favicon.ico"
+        }
+    </script>
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Projet : Accueil Client">
+    <meta property="og:site_name" content="Paul Gravinese">
+    <meta property="og:image" content="https://pgrvs.github.io/portfolio/favicon.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="../scripts/init-theme.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../src/scripts/init-theme.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../styles/style_global.css"/>
-    <link rel="stylesheet" href="../styles/style_detail_projet.css"/>
-    <link rel="stylesheet" href="../styles/variables.css"/>
-    <link rel="icon" href="../../favicon.ico" />
+    <link rel="stylesheet" href="../src/styles/style_global.css"/>
+    <link rel="stylesheet" href="../src/styles/style_detail_projet.css"/>
+    <link rel="stylesheet" href="../src/styles/variables.css"/>
 </head>
 <body>
 <div class="container">
     <header class="header-detail">
         <div class="div-retour-header">
-            <a href="../../projets.html#projet-stage-1"><i class="bi bi-arrow-left-square"></i></a>
+            <a href="../projets.html#projet-stage-1"><i class="bi bi-arrow-left-square"></i></a>
         </div>
         <div>
             <h1 class="fw-bold">Accueil Client chez Eurydice</h1>
@@ -47,7 +70,7 @@
         <div class="div-image">
             <div class="div-image-container">
                 <video class="col-12" id="videoStage" controls>
-                    <source src="../assets/stage1-eurydice-accueil-client/accueil-client-video.mp4" type=video/mp4>
+                    <source src="../src/assets/stage1-eurydice-accueil-client/accueil-client-video.mp4" type=video/mp4>
                 </video>
             </div>
         </div>
@@ -65,9 +88,9 @@
 
 </div>
 
-<script src="../scripts/footer.js"></script>
-<script src="../scripts/carousel.js"></script>
-<script src="../scripts/theme-switcher.js"></script>
+<script src="../src/scripts/footer.js"></script>
+<script src="../src/scripts/carousel.js"></script>
+<script src="../src/scripts/theme-switcher.js"></script>
 
 </body>
 </html>
