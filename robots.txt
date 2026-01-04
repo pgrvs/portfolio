@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /portfolio/
+Allow: /portfolio/projets/
+Disallow: /portfolio/src/
+
+Sitemap: https://pgrvs.github.io/portfolio/sitemap.xml
