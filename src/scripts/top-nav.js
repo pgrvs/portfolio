@@ -15,13 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             /* ----- GESTION ACTIVE ----- */
             navLinks.forEach(link => {
+                const linkHref = link.getAttribute("href");
+
+                // Sécurité absolue
+                if (!linkHref) return;
+
                 link.classList.remove("active");
-                const href = link.getAttribute("href");
 
                 if (
-                    currentPath === href ||
-                    (currentPath === "/portfolio/" && href.includes("index.html")) ||
-                    (currentPath === "/portfolio" && href.includes("index.html"))
+                    currentPath === linkHref ||
+                    (currentPath === "/portfolio/" && linkHref.includes("index.html")) ||
+                    (currentPath === "/portfolio" && linkHref.includes("index.html"))
                 ) {
                     link.classList.add("active");
                 }
