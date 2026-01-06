@@ -33,20 +33,16 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles/variables.css"/>
     <link rel="stylesheet" href="../src/styles/style_global.css"/>
     <link rel="stylesheet" href="../src/styles/style_detail_projet.css"/>
-    <link rel="stylesheet" href="../src/styles/variables.css"/>
+    <link rel="stylesheet" href="../src/styles/top-nav.css">
 </head>
-<body>
+<body data-section-id="projet-stage-accueil-client">
 <div class="container">
     <header class="header-detail">
-        <div class="div-retour-header">
-            <a href="../projets.html#projet-stage-1"><i class="bi bi-arrow-left-square"></i></a>
-        </div>
-        <div>
-            <h1 class="fw-bold">Accueil Client chez Eurydice</h1>
-            <p>Stage de 1<sup>ère</sup> année de BTS Informatique</p>
-        </div>
+        <h1 class="fw-bold">Accueil Client chez Eurydice</h1>
+        <p>Stage de 1<sup>ère</sup> année de BTS Informatique</p>
     </header>
 
     <div class="section">
@@ -83,14 +79,16 @@
         </p>
     </div>
 
+    <div id="top-nav"></div>
     <div id="theme-switcher-container"></div>
     <div id="footer-container"></div>
 
 </div>
 
-<script src="../src/scripts/footer.js"></script>
+<script src="../src/scripts/top-nav.js"></script>
 <script src="../src/scripts/carousel.js"></script>
 <script src="../src/scripts/theme-switcher.js"></script>
+<script src="../src/scripts/footer.js"></script>
 
 </body>
 </html>

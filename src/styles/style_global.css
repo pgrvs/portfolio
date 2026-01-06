@@ -53,7 +53,7 @@ a:focus {
 .theme-toggle {
     position: relative;
     width: 60px;
-    height: 26px;
+    height: 24px;
 }
 
 /* Masquer la checkbox native */
@@ -80,7 +80,7 @@ a:focus {
     top: 2px;    /* centrer verticalement */
     left: 2px;   /* espace depuis le bord gauche */
     width: 32px; /* largeur du knob */
-    height: 22px;/* hauteur du knob, un peu plus fine que le track */
+    height: 20px;/* hauteur du knob, un peu plus fine que le track */
     background-color: #fff;
     border-radius: 30px; /* demi-hauteur pour un ovale parfait */
     transition: transform 0.3s;

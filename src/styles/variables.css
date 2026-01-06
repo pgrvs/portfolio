@@ -13,11 +13,12 @@
     --carousel-control-hover-color: #616161;
     --banniere-color-1: #007806;
     --banniere-color-2: #00c306;
+    --top-nav-height: 90px;
 }
 
 :root[data-theme="light"] {
     --background-page-color: #f0f0f0;
-    --white-color: #000;
+    --white-color: #1e1e1e;
     --background-element-color: #ffffff;
     --attachment-tag: #dcdcdc;
     --background-card: #ffffff;

@@ -35,22 +35,22 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/styles/variables.css"/>
     <link rel="stylesheet" href="src/styles/style_global.css"/>
     <link rel="stylesheet" href="src/styles/style_projets.css"/>
-    <link rel="stylesheet" href="src/styles/variables.css"/>
+    <link rel="stylesheet" href="/src/styles/top-nav.css">
 </head>
 <body>
 
 <div class="container">
     <header class="header-projets">
-        <a href="index.html#section-projets"><i class="bi bi-arrow-left-square"></i></a>
         <h1 class="fw-bold">Mes Projets</h1>
     </header>
 
     <div class="projects-container">
         <h2 class="titre-section-projets">En 3<sup>e</sup> année de BUT</h2>
         <!-- Projet 7 -->
-        <div class="project" id="projet-web-documentaire">
+        <div class="project" id="projet-satge-web-documentaire">
             <p class="banniere-info-projet">En stage</p>
             <img src="src/assets/stage3-web-documentaire/page-accueil.jpg" alt="Page d'accueil du web documentaire">
             <div class="project-content">
@@ -90,7 +90,7 @@
 
         <h2 class="titre-section-projets">En  2<sup>e</sup> année de BTS</h2>
         <!-- Projet 4 -->
-        <div class="project" id="projet-stage-1">
+        <div class="project" id="projet-stage-accueil-client">
             <p class="banniere-info-projet">En stage</p>
             <img src="src/assets/stage1-eurydice-accueil-client/accueil.png" alt="Accueil Client chez Eurydice">
             <div class="project-content">
@@ -102,7 +102,7 @@
             </div>
         </div>
         <!-- Projet 3 -->
-        <div class="project" id="projet-tourisme">
+        <div class="project" id="projet-fc-tourisme">
             <img src="src/assets/fc-tourisme/accueil.png" alt="Projet 2">
             <div class="project-content">
                 <h3>FC Tourisme</h3>
@@ -138,12 +138,14 @@
         </div>
     </div>
 
+    <div id="top-nav"></div>
     <div id="theme-switcher-container"></div>
     <div id="footer-container"></div>
 
 </div>
 
-<script src="src/scripts/footer.js"></script>
+<script src="/src/scripts/top-nav.js"></script>
 <script src="src/scripts/theme-switcher.js"></script>
+<script src="src/scripts/footer.js"></script>
 </body>
 </html>

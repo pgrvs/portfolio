@@ -1,25 +1,5 @@
 .header-detail {
-    display: flex;
-    padding: 40px 0;
-    align-items: center;
-}
-
-.div-retour-header {
-    display: flex;
-    align-items: center;
-    align-content: center;
-}
-
-.div-retour-header a {
-    padding: 0 30px 0 10px;
-    color: var(--white-color);
-    scale: 1.1;
-    transition: transform 0.3s ease-out;
-    transform-origin: center;
-}
-
-.div-retour-header a:hover {
-    transform: scale(1.2);
+    padding: 90px 0 40px 0;
 }
 
 .header-detail h1 {
