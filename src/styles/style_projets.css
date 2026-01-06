@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    padding: 90px 0 20px 0;
+    padding: 90px 0 10px 0;
 }
 
 .projects-container {
@@ -94,10 +94,6 @@
 }
 
 @media (max-width: 576px) {
-    .header-projets {
-        padding: 20px 0 10px 0;
-    }
-
     .project {
         padding: 15px;
     }
